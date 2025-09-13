@@ -7,7 +7,7 @@ This tool fetches news articles in real-time (with a 12-hour delay on the free G
 
 ## 🚀 Features
 
-- ✅ Fetches news articles using the [GNews API](https://docs.gnews.io/)
+- ✅ Fetches news articles using the [GNews API](https://docs.gnews.io/) (100 Requests per day allowed)
 - ✅ Fetches social media posts using the [Facebook API](https://developers.facebook.com/docs/pages-api) , [Instagram API](https://developers.facebook.com/docs/instagram-platform) , [Twitter API](https://docs.x.com/x-api/introduction) , [Reddit API](https://publicapis.io/reddit-api)
 - ✅ Displays detailed information about each article:
     - Published Time
