@@ -40,8 +40,18 @@ git checkout -b kuheli-branch
 ```
 
 ### 4. Make Your Changes
-- Add new features, fix bugs, improve documentation, or update examples.
-- Save your changes locally.
+- Open the file `Fake_News_Detection.ipynb` in **Google Colab**.  
+- Make your improvements, such as:
+  - Adding new features
+  - Fixing bugs
+  - Improving documentation or examples
+  - Enhancing visualizations or outputs
+- After making your changes, **save the notebook** in Google Colab.  
+- Then, save a **copy back to this GitHub repository** folder directly from Google Colab:
+  1. Click on **File → Save a copy in GitHub**.
+  2. Choose your forked repository and the branch you created (e.g., `kuheli-branch`).
+  3. Add a **descriptive commit message** about your changes.
+  4. Click **OK** to push the changes to your GitHub fork.
   
 ### 5. Commit Your Changes (For Gitbash or any Git client eg- cmd)
 - Commit your changes with a clear message explaining what you did:
