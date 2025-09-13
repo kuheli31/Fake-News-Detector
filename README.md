@@ -53,7 +53,7 @@ git checkout -b kuheli-branch
   3. Add a **descriptive commit message** about your changes.
   4. Click **OK** to push the changes to your GitHub fork.
   
-### 5. Commit Your Changes (For Gitbash or any Git client eg- cmd)
+### 5. Commit Your Changes (If using Git locally)
 - Commit your changes with a clear message explaining what you did:
 ```bash
 git add .
