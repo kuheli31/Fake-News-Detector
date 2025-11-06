@@ -1,23 +1,81 @@
-# 📰 Fake News Detector with Real-Time News Fetching
+# 🧠 Fake News Detection System with Source Tracking
 
-Welcome to the **Fake News Detector** project!  
-This tool fetches news articles in real-time (with a 12-hour delay on the free GNews API plan) based on a user-defined topic and displays detailed information about each article. It can be easily extended to classify news as real or fake using machine learning models.
+Welcome to the **Fake News Detection System** — an AI-powered web application built using **Streamlit**, **Machine Learning**, and **Graph Neural Network (GCN)** concepts.  
+This project analyzes and visualizes the spread of misinformation across platforms like **Twitter** and **Reddit**, while comparing it with verified data from **GNews**.
+
+🔗 **Live Demo:** [Fake News Detection App](https://savouriest-roxanne-botryose.ngrok-free.dev/)
 
 ---
 
 ## 🚀 Features
 
-- ✅ Fetches news articles using the [GNews API](https://docs.gnews.io/) (100 Requests per day allowed)
-- ✅ Fetches social media posts using the [Facebook API](https://developers.facebook.com/docs/pages-api) , [Instagram API](https://developers.facebook.com/docs/instagram-platform) , [Twitter API](https://docs.x.com/x-api/introduction) , [Reddit API](https://publicapis.io/reddit-api)
-- ✅ Displays detailed information about each article:
-    - Published Time
-    - Title
-    - Description
-    - Image URL
-    - Content Snippet
-    - Source Name, URL & Country
-    - Article URL
- 
+### 📰 Real or Fake News Classification
+- Accepts any news text from the user.
+- Uses **TF-IDF** and **Cosine Similarity** to compare input with verified **GNews** articles.
+- Classifies input as:
+  - ✅ **Real News** (similarity ≥ 70%)
+  - ❌ **Fake News** (similarity < 70%)
+- Displays confidence percentage and visual progress bar.
+
+---
+
+### 🌐 Multi-Platform Data Integration
+- Fetches and analyzes news from:
+  - 🐦 **Twitter**
+  - 👽 **Reddit**
+  - 📰 **Google News (GNews API)**
+- Combines posts, authors, and metadata into a unified dataset.
+
+---
+
+### 📊 Fake News Ratio Visualization
+- Calculates each user’s **Fake News Ratio** (fraction of fake posts per author).
+- Displays:
+  - 📈 Bar chart showing top fake-news spreaders.
+  - 📊 Histogram of fake-news posting activity.
+- Highlights **Top 10 users** spreading fake news, along with their **platforms and post URLs**.
+
+---
+
+### 🕸️ Network Graph Visualization
+- Constructs a **Graph Network** using `NetworkX`.
+- Nodes = posts; edges = textual similarity above 0.5.
+- Fake posts appear in **red**, real posts in **blue** — illustrating clusters of misinformation.
+- Helps visualize how fake news spreads across similar content.
+
+---
+
+### 🔗 Source Tracking
+- Provides direct URLs for **Twitter** and **Reddit** posts.
+- Enables transparency and traceability of misinformation sources.
+
+---
+
+## 🧩 Tech Stack
+
+| Category | Technologies Used |
+|-----------|------------------|
+| **Frontend / UI** | Streamlit |
+| **Backend / ML** | Python, Scikit-learn, NumPy, pandas |
+| **Visualization** | Matplotlib, Seaborn, NetworkX |
+| **Text Analysis** | TF-IDF Vectorizer, Cosine Similarity |
+| **Graph Analysis (GCN Concept)** | PyTorch Geometric |
+| **APIs** | GNews API, Twitter API, Reddit API |
+
+---
+
+## ⚙️ How It Works
+
+1. **Input:** User enters a news headline or article.
+2. **TF-IDF Processing:** Converts input and verified sources into vectorized features.
+3. **Cosine Similarity:** Measures similarity between input and real GNews data.
+4. **Classification:** Displays similarity score and classifies news as real or fake.
+5. **Visualization:**
+   - Fake-news ratio per author.
+   - Network graph showing connections between similar posts.
+6. **Source Tracking:** Displays original post URLs for transparency.
+
+---
 ## 🤝 Contribution
 
 ### 1. Fork the Repository
@@ -70,3 +128,15 @@ git push origin kuheli-branch
 - Click Compare & pull request.
 - Add a descriptive title and explain your changes in detail.
 - Submit the pull request. Your changes will be reviewed and merged.
+
+---
+
+## ⚖️ License & Copyright
+
+© 2025 [Kuheli Bera](https://github.com/kuheli31). All rights reserved.  
+
+This repository and its contents are protected under copyright law.  
+You are free to **use and study** the code for **personal or educational purposes** only.  
+**Redistribution or commercial use without explicit permission is prohibited.**
+
+
